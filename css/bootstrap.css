@@ -6800,6 +6800,80 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 
 /* Customized */
+
+/* General */
+
+.navbar-brand-zaozao {
+  padding: 10px 7.5px 7.5px 10px;
+}
+
+.navbar-zaozao {
+  background-color: #222;
+  border-radius: 0px;
+}
+
+#dropdown-zaozao {
+  color: #fff;
+}
+
+#dropdown-zaozao:hover {
+  color: #fdd900;
+  background-color: #222;
+}
+
+#dropdown-zaozao:focus {
+  color: #fdd900;
+  background-color: #222;
+}
+
+.dropdown-menu-zaozao {
+  background-color: rgba(34,34,34,0.8);
+}
+
+.dropdown-menu > li.dropdown-menu-zaozao-text a{
+  color: #fff;
+}
+
+.dropdown-menu > li.dropdown-menu-zaozao-text a:hover{
+  color: #fdd900;
+  background-color: rgba(34,34,34,0.8);
+}
+
+.nav > li.header-zaozao a{
+  color: #fff;
+}
+
+.nav > li.header-zaozao a:hover{
+  color: #fdd900;
+  background-color: #222;
+}
+
+.search-zaozao {
+  border-radius: 0px;
+  background-color: #222;
+  height: 25px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.search-btn-zaozao {
+  color: #fff;
+  background-color: #222;
+  height: 25px;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+.search-btn-zaozao:hover {
+  color: #fdd900;
+  background-color: #222;
+  border-color:#fdd900;
+  height: 25px;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+
 /* Launch Page*/
 .container-fluid .row .col-md-6 h2 {
   font-size: 60px;
