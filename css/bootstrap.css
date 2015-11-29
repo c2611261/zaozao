@@ -6929,6 +6929,135 @@ button.close {
 }
 
 /* course_home_page */
+.thumbnail-zaozao {
+  border: none;
+}
+
+.thumbnail-title a{
+  color: #222;
+}
+
+.thumbnail-title a:hover{
+  color: #fdd900;
+  text-decoration: none;
+}
+ 
+.grow img:hover {
+  -webkit-transform: rotate(-1deg);
+     -moz-transform: rotate(-1deg);
+       -o-transform: rotate(-1deg);
+      -ms-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.opacity img:hover {
+  opacity: 0.8;
+}
+
+.blur img:hover {
+  -webkit-filter: blur(2px);
+}
+
+/* course_purchase */
+
+.btn-zaozao-2 {
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #222;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 8px 16px 8px 16px;
+  border: solid #222 2px;
+  text-decoration: none;
+}
+
+.btn-zaozao-2:hover{
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #fdd900;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 8px 16px 8px 16px;
+  border: solid #fdd900 2px;
+  text-decoration: none;
+}
+
+.col-md-8-zaozao {
+  border-right: solid #222 1px;
+}
+
+/* about_us */
+.btn-zaozao-1 {
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #222;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #222 2px;
+  text-decoration: none;
+}
+
+.btn-zaozao-1:hover{
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: Arial;
+  color: #fdd900;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #fdd900 2px;
+  text-decoration: none;
+}
+
+/* tourists_appointment */
+#input-text {
+  border: solid #333 1px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+#input-text:focus {
+  border: solid #fdd900 1px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+#select {
+  border: solid #333 1px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+#select:focus {
+  border: solid #fdd900 1px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+#select-date-left {
+  border: solid #333 1px;
+  border-radius: 2px 0px 0px 2px;
+  height: 40px;
+}
+
+#select-date-right {
+  border: solid #333 1px;
+  border-radius: 0px 2px 2px 0px;
+  height: 40px;
+}
+
+.row-margin-top {
+  margin-top: 40px;
+}
+
 
 /* course_page_logout */
 .courseintro {
