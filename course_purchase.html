@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"  ng-app="coursePurchaseModel">
 <head>
 <title>套餐购买</title>
 <meta charset="utf-8">
@@ -17,6 +17,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <script src="3rd party/bower_components/angular/angular.min.js"></script>
+    <script src="public/js/course_purchase.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,6 +86,22 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div ng-controller='CoursePurchaseController'>
+  
+  <div class="col-md-12" ng-repeat="coursePlan in coursePlanList" 
+      ng-model="coursePlan">
+      <div class="col-md-8 col-md-8-zaozao">
+        <h3>{{coursePlan.title}}</h3>
+        <p>{{coursePlan.content}}</p>
+        <p>{{coursePlan.subTitle}}</p>
+      </div>
+      <div class="col-md-4">
+        <h3>{{coursePlan.price}}</h3>
+        <a href="#" class="btn btn-primary btn-zaozao-2">购买</a>
+      </div>
+  </div>
+
+<!-- 
 <div class="col-md-12">
   <div class="col-md-8 col-md-8-zaozao">
     <h3>套餐一</h3>
@@ -155,8 +172,8 @@
     <h3>共计¥3600（¥100一个月）</h3>
     <a href="#" class="btn btn-primary btn-zaozao-2">购买</a>
   </div>
+</div> -->
 </div>
-
 
 
 </body>
