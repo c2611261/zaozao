@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="coursePageMemberModel">
 <head>
 <title>早早课堂</title>
 <meta charset="utf-8">
@@ -18,6 +18,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="3rd party/bower_components/jquery/dist/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <script src="3rd party/bower_components/angular/angular.min.js"></script>
+    <script src="public/js/course_page_member.js" type="text/javascript"></script>
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -71,129 +78,34 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="row">
+<div class="row" ng-controller='CoursePageMemberController'>
   <div class="col-md-10">
     <h2>今日课堂</h2>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4" ng-repeat='courseCategory in courseCategories'>
     <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
+      <div class="grow"><a href="article_detail_page_img.html"><img ng-src="{{courseCategory.titleImagePath}}" alt="..."></a></div>
       <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
+        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>{{courseCategory.name}}</h3></a></div>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
+        <p>{{courseCategory.introduction}}</p>
       </div>
     </div>
   </div>
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_video.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_video.html"><h3>视频课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="row">
   <div class="col-md-10">
     <h2>往日课程</h2>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4" ng-repeat='historyCourseCategory in historyCourseCategories'>
     <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
+      <div class="grow"><a href="article_detail_page_img.html"><img ng-src="{{historyCourseCategory.titleImagePath}}" alt="..."></a></div>
       <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
+        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>{{historyCourseCategory.name}}</h3></a></div>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_video.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_video.html"><h3>视频课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4">
-    <div class="thumbnail thumbnail-zaozao">
-      <div class="grow"><a href="article_detail_page_img.html"><img src="images/gray-background.jpg" alt="..."></a></div>
-      <div class="caption">
-        <div class="thumbnail-title"><a href="article_detail_page_img.html"><h3>图文课程</h3></a></div>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</p>
+        <p>{{historyCourseCategory.introduction}}</p>
       </div>
     </div>
   </div>
@@ -220,8 +132,7 @@
   </div>
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
