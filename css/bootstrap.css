@@ -6848,6 +6848,11 @@ button.close {
   background-color: #222;
 }
 
+.nav > li.header-zaozao a:active{
+  color: #fdd900;
+  background-color: #222;
+}
+
 .search-zaozao {
   border-radius: 0px;
   background-color: #222;
