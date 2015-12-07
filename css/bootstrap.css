@@ -6878,6 +6878,10 @@ button.close {
   margin-top: 5px;
 }
 
+#icon-bar-zaozao {
+  background-color: #fff;
+}
+
 
 /* Launch Page*/
 .container-fluid .row .col-md-6 h2 {
